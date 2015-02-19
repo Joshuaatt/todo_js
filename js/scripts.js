@@ -16,11 +16,15 @@ $(function() {
 
     var inputtedName = $("input#list-name").val();
     var newToDo = { name: inputtedName, task: [] };
-
+    
     $("ul.lists").append("<li><span>" + newToDo.name + "</span></li>");
 
-    $(".lists").last().click(function() {
+    $(".lists li").last().click(function() {
       $(".task-header").text(newToDo.name);
+      // clear out ul.lists
+      // repopulate with li's for each task in newToDo
+
+      // unbind all other submit events from form#new-tasks (JQuery 'off' method)
       $("form#new-tasks").submit(function(event) {
         event.preventDefault();
         var inputtedTask = $("input#task-name").val();
