@@ -24,11 +24,10 @@ $(function() {
       $("form#new-tasks").submit(function(event) {
         event.preventDefault();
         var inputtedTask = $("input#task-name").val();
-        var newTask = newToDo.task.push(inputtedTask);
-
-        $("ul.tasks").append("<li>" + newToDo.task + "</li>");
+        newToDo.task.push(inputtedTask);
+        var lastItem = newToDo.task[newToDo.task.length - 1];
+        $("ul.tasks").append("<li>" + lastItem + "</li>");
       });
     });
   });
-
 });
