@@ -1,6 +1,9 @@
 var ToDo = {
   name: function(newName) {
     this.name = newName;
+  },
+  task: function(newTask) {
+    this.task = newTask;
   }
 };
 
