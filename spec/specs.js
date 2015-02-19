@@ -13,5 +13,12 @@ describe("ToDo", function() {
       testToDo.task("Walk the dog");
       expect(testToDo.task).to.equal("Walk the dog");
     });
+    it("takes two tasks and returns both tasks", function() {
+      var testToDo = Object.create(ToDo);
+      testToDo.task("Walk the dog");
+
+      testToDo.task("Wash the cat");
+      expect(testToDo.task).to.equal("Walk the dog", "Wash the cat");
+    });
   });
 });

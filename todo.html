@@ -1,9 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>To Do List</title>
   </head>
   <body>
+    <div class="container">
+      <div class="col-md-6">
+        <div class="create-list">
+          <h2>Lists</h2>
+          <ul class="lists"></ul>
+          <form id="new-lists">
+            <div class="form-group">
+              <label for="list-name">Create a list</label>
+              <input type="text" class="form-control" id="list-name">
+            </div>
 
+            <button type="submit" class="btn">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-md-6">
+        <div class="create-task">
+          <h2 class="task-header"></h2>
+          <ul class="tasks"></ul>
+          <form id="new-tasks">
+            <div class="form-group">
+              <label for="task-name">Create a task</label>
+              <input type="text" class="form-control" id="task-name">
+            </div>
+
+            <button type="submit" class="btn">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

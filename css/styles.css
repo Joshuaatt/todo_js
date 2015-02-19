@@ -1,0 +1,12 @@
+/*.bubbles {
+  display: none;
+}*/
+
+.lists {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.lists:hover {
+  text-decoration: underline;
+}
