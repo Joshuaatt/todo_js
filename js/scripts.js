@@ -16,21 +16,26 @@ $(function() {
 
     var inputtedName = $("input#list-name").val();
     var newToDo = { name: inputtedName, task: [] };
-    
+
     $("ul.lists").append("<li><span>" + newToDo.name + "</span></li>");
 
     $(".lists li").last().click(function() {
+      $("ul.tasks").text("");
+
       $(".task-header").text(newToDo.name);
+
       // clear out ul.lists
       // repopulate with li's for each task in newToDo
 
-      // unbind all other submit events from form#new-tasks (JQuery 'off' method)
+      // unbind all other submit events from form#new-tasks (JQuery 'off' method) -done
+      $("form#new-tasks").off()
       $("form#new-tasks").submit(function(event) {
         event.preventDefault();
         var inputtedTask = $("input#task-name").val();
         newToDo.task.push(inputtedTask);
         var lastItem = newToDo.task[newToDo.task.length - 1];
         $("ul.tasks").append("<li>" + lastItem + "</li>");
+
       });
     });
   });
